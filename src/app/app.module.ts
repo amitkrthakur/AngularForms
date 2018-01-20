@@ -5,13 +5,15 @@ import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { MyComponentComponent } from './my-component/my-component.component';
 import { FormComponent } from './form/form.component';
+import { FormdetailComponent } from './formdetail/formdetail.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     MyComponentComponent,
-    FormComponent
+    FormComponent,
+    FormdetailComponent
   ],
   imports: [
     BrowserModule,
