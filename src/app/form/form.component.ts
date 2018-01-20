@@ -7,6 +7,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FormComponent implements OnInit {
 
+  name: string = '';
+  nameDisplay: string = '';
+  showSpinner: boolean = false;
+
+  showName() {
+    this.showSpinner = true;
+
+    setTimeout(()=>{
+       this.nameDisplay = this.name;
+       this.showSpinner = false;
+    }, 1000)
+  }
+
+
   constructor() { }
 
   ngOnInit() {

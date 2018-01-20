@@ -1,8 +1,12 @@
-<p>
-  Please fill in the form below:
-</p>
-
-<form>
-
-
-</form>
+<mat-card>
+  <mat-form-field>
+    <input matInput [(ngModel)]="name" placeholder="What's your name?">
+  </mat-form-field>
+<br/>
+<button mat-raised-button (click)="showName()">Submit</button>
+<mat-spinner [style.display]="showSpinner ? 'block' : 'none' "></mat-spinner>
+<mat-card *ngIf="nameDisplay">
+    <h1>Hi, {{ nameDisplay }}, <br/>How are you?</h1>
+  </mat-card>
+  
+</mat-card>
