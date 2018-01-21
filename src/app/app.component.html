@@ -2,13 +2,13 @@
 <nav>
   <mat-toolbar color="primary">
     <mat-toolbar-row>
-      <span>MyMaterial</span>
+      <span>MyAngular App</span>
   
       <span class="example-spacer"></span>
       
-      <button mat-button>Welcome</button>
-      <button mat-button>About</button>
-      <button mat-button>Contact</button>
+      <button mat-button ><a routerLink="" routerLinkActive="active current" [routerLinkActiveOptions]="{exact:
+        true}">Welcome</a></button>
+      <button mat-button><a routerLink="about" routerLinkActive="active current">About</a></button>
     </mat-toolbar-row>
   </mat-toolbar>
 </nav>

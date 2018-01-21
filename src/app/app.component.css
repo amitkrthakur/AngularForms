@@ -13,3 +13,14 @@ h1{
 .example-spacer {
   flex: 1 1 auto;
 }
+a{
+  color: #e7e7e7;
+}
+a:hover, a.active{
+  text-decoration: none;
+  color:#008cff;
+}
+
+.mat-toolbar.mat-primary{
+  background: #010024;
+}
