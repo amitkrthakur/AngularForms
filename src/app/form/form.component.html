@@ -1,12 +1,36 @@
 <mat-card>
-  <mat-form-field>
-    <input matInput [(ngModel)]="name" placeholder="What's your name?">
-  </mat-form-field>
-<br/>
-<button mat-raised-button (click)="showName()">Submit</button>
-<mat-spinner [style.display]="showSpinner ? 'block' : 'none' "></mat-spinner>
-<mat-card *ngIf="nameDisplay">
-    <h1>Hi, {{ nameDisplay }}, <br/>How are you?</h1>
-  </mat-card>
-  
+  <div [style.display]="question ? 'block' : 'none' ">
+    <mat-form-field>
+      <input matInput [(ngModel)]="name" placeholder="What's your name?">
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button (click)="showName()">Submit
+      <i class="material-icons">send</i>
+    </button>
+  </div>
+  <div class="center">
+    <mat-spinner [style.display]="showSpinner ? 'block' : 'none' "></mat-spinner>
+  </div>
+  <h1 *ngIf="nameDisplay">Hi, {{ nameDisplay }} How are you?</h1>
 </mat-card>
+
+<div [style.display]="asktodo ? 'block' : 'none' ">
+  <mat-card class="name">
+    Now Let's create a To-Do List
+    <br/>
+    <mat-form-field>
+      <input matInput [(ngModel)]="todoDisplay" placeholder="What do you plan to do next??">
+    </mat-form-field>
+    <br/>
+    <button mat-raised-button (click)="additem()">Add
+      <i class="material-icons">playlist_add</i>
+    </button>
+    <mat-selection-list #i>
+      <mat-list-option *ngFor=" let i of todo ">{{i}}</mat-list-option>
+    </mat-selection-list>
+    <p>
+      Tasks completed: {{i.selectedOptions.selected.length}}/{{todo.length}}
+    </p>
+    <p><button mat-raised-button (click)="removeitem()"></button></p>
+  </mat-card>
+</div>

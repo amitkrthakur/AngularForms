@@ -1,6 +1,9 @@
 mat-form-field{
     width: 70%;
 }
-mat-card{
-    align-content: center;
+.mat-spinner{
+    margin: 1em auto;
+}
+.name{
+    margin:50px;
 }

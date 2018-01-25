@@ -1,26 +1,21 @@
-h1{
-  color :#010024;
-}
 .container{
-  background: #e7e7e7;
+  background: #fdfdfd;
   padding: 100px;
   margin:50px auto;
 }
 .example-icon {
   padding: 0 14px;
 }
-
 .example-spacer {
   flex: 1 1 auto;
 }
 a{
-  color: #e7e7e7;
+  color: #000222;
 }
-a:hover, a.active{
+.mat-button:hover a, a.active{
   text-decoration: none;
-  color:#008cff;
+  color:#fff;
 }
-
-.mat-toolbar.mat-primary{
-  background: #010024;
+.center{
+  text-align:center;
 }
